@@ -11,6 +11,8 @@ import static java.lang.Long.MAX_VALUE;
 public class Main {
 
     public static void main(String[] args) {
+        List<Book>books=BookDatabase.loadBooks();
+        StartScreen.bookSystem(books);
 
     }
 }

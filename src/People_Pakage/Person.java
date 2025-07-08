@@ -61,8 +61,18 @@ public abstract class Person {
     public void setRole(String role) {
         this.role = role;
     }
-    public List<Book>showAllBooks(){
-        return List.of();
+    public void showAllBooks(List<Book>books){
+        for (Book book : books) {
+            System.out.println("==============================");
+            System.out.println("Title : " + book.getBookName());
+            System.out.println("Author: " + book.getPublisher());
+            System.out.println("Year  : " + book.getYear());
+            System.out.println("Price : " + book.getPrice());
+            System.out.println("ISBN  : " + book.getISBN());
+            System.out.println("Type  : " + book.getClass().getSimpleName());
+
+        }
+        System.out.println("==============================");
     }
     public Book findBook(String name,List<Book>books){
         for(Book b:books){

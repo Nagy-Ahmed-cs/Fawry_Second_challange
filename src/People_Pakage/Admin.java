@@ -58,6 +58,7 @@ public class Admin extends Person implements AdminServices{
                 System.out.print("Enter quantity: ");
                 int quantity = input.nextInt();
                 PaperBook paperBook = new PaperBook(price, bookName, publisher, year, isbn, quantity);
+                books.add(paperBook);
                 break;
             case "ebook":
 
@@ -86,6 +87,7 @@ public class Admin extends Person implements AdminServices{
 
 
                 EBook ebook = new EBook(price1, bookName1, publisher1, year1, isbn1, fileType);
+                books.add(ebook);
                 break;
             default:
                 System.out.println("Enter suitable type of books !!!!!");
