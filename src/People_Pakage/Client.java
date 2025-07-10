@@ -39,7 +39,7 @@ public class Client extends Person implements ClientServices {
         if(book!=null){
             System.out.println("The book is here ");
             System.out.println("Enter type of payment (cash / visa ) : ");
-            String payment=input.nextLine();
+            String payment=input.nextLine().trim();
             if(payment.equalsIgnoreCase("cash")){
                 return "The process completed , congrats";
             }
